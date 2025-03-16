@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 300vh;
+            background-color: yellow;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            position: relative;
+            left: 200px;
+            top: 100px;
+        }
+        .parent{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            
+        }
+        div{
+            width: 60px;
+            height: 40px;
+            position: absolute;
+            background-color: yellow;
+        }
+        .fix{
+            position: fixed;
+            top: 200px;
+            right: 500px;
+            left: 200px;
+            bottom: 300px;
+        }
+        .done{
+            position: sticky;
+            top: 200px;
+            right: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Indrasena Reddy</div>
+    <div class="parent">
+    <div>child element</div>
+    </div>
+    <div class="fix">fixed</div>
+    <div class="done">sticky</div>
+</body>
+</html>

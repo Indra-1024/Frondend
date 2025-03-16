@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: yellowgreen;
+            position: relative;
+            animation-name: indra;
+            animation-duration: 5s;
+            animation-iteration-count: 10;
+        }
+        @keyframes indra{
+            0%{left: 0px;}
+            50%{right: 75px; transform: rotate(270deg);}
+            100%{left: 200px;}
+            200%{bottom: 400px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

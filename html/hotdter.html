@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JioHoster - Web Hosting Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Header */
+header {
+    background: #0073e6;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://source.unsplash.com/1600x600/?technology,hosting') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff6600;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Plans Section */
+.plans {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.plans h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.plan-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.plan {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.plan h3 {
+    color: #0073e6;
+    font-size: 24px;
+}
+
+.plan p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.plan ul li {
+    margin: 8px 0;
+}
+
+.plan .btn {
+    margin-top: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    background: #0073e6;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="container">
+            <h1>JioHoster</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Hosting Plans</a></li>
+                    <li><a href="#">Domains</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Reliable & Affordable Web Hosting</h2>
+            <p>Get your website online with fast, secure, and affordable hosting plans.</p>
+            <a href="#" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Hosting Plans -->
+    <section class="plans">
+        <div class="container">
+            <h2>Our Hosting Plans</h2>
+            <div class="plan-cards">
+                <div class="plan">
+                    <h3>Basic Plan</h3>
+                    <p>₹99/month</p>
+                    <ul>
+                        <li>1 Website</li>
+                        <li>10GB SSD Storage</li>
+                        <li>Free SSL Certificate</li>
+                        <li>24/7 Support</li>
+                    </ul>
+                    <a href="#" class="btn">Choose Plan</a>
+                </div>
+                <div class="plan">
+                    <h3>Pro Plan</h3>
+                    <p>₹199/month</p>
+                    <ul>
+                        <li>5 Websites</li>
+                        <li>50GB SSD Storage</li>
+                        <li>Free SSL & Domain</li>
+                        <li>24/7 Priority Support</li>
+                    </ul>
+                    <a href="#" class="btn">Choose Plan</a>
+                </div>
+                <div class="plan">
+                    <h3>Business Plan</h3>
+                    <p>₹499/month</p>
+                    <ul>
+                        <li>Unlimited Websites</li>
+                        <li>200GB SSD Storage</li>
+                        <li>Free SSL, Domain & Email</li>
+                        <li>24/7 VIP Support</li>
+                    </ul>
+                    <a href="#" class="btn">Choose Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 JioHoster. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>

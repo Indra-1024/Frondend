@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,5 +23,47 @@
 </head>
 <body>
     <div class="indra">This is Indrasena reddy</div>
+</body>
+</html>  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Text Change</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .text-box {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="text-box" id="text1">Text One</div>
+    <div class="text-box" id="text2">Text Two</div>
+
+    <script>
+        const texts1 = ["Hello", "Welcome", "Enjoy", "Explore"];
+        const texts2 = ["World", "Here", "Your Stay", "New Things"];
+
+        let index = 0;
+
+        function changeText() {
+            document.getElementById("text1").innerText = texts1[index];
+            document.getElementById("text2").innerText = texts2[index];
+            index = (index + 1) % texts1.length; // Loop back when it reaches the end
+        }
+
+        setInterval(changeText, 2000); // Change text every 2 seconds
+    </script>
+
 </body>
 </html>

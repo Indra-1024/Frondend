@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(55deg, red,yellow,white,black);
+        }
+        .radial{
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, yellow,white,green,brown);
+        }
+        .conical{
+            width: 200px;
+            height: 200px;
+            background: conic-gradient(yellow,white,purple,pink);
+            font-style: normal;
+            transition: font-style 5s ease;
+            
+        }
+        .conical:hover{
+            font-style: italic;
+            
+        }
+        .model{
+            width: 200px;
+            height: 200px;
+            background-color: black; 
+            transition: background-color 5s ease;
+            transition: transform 2s ease;
+        }
+        .model:hover{
+            background-color: blueviolet;
+            transform: scale3d(2.5);
+        }
+        .practice{
+            width: 50px;
+            height: 50px;
+            background-color: rgb(51, 66, 156); 
+            border-radius: 10px;
+            transition: transform 2s ease, border-radius 5s ease;
+        }
+        .practice:hover{
+            transform: scale(0.5) rotate(30deg);
+            border-radius: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">linear graidients</div>
+    <div class="radial">radial graidients</div>
+    <div class="conical">conical graidients</div>
+    <div class="model"></div>
+    <div class="practice"></div>
+</body>
+</html>
