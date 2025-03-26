@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let car = {
+            brand:"Toyoto",
+            model:"Corolla",
+            year:2020
+        };
+        console.log(car.brand);
+        console.log(car.model);
+        console.log(car.year);
+        
+        // Lopping Through object Properties
+        for (let key in car){
+            console.log('${key}:${car[key]}');
+        }
+
+        // Adding /Deleting objects
+        let person = {};
+        person.firstName = "Indrasena";
+        person.age = 22;
+        person.lastName = "Reddy";
+        person.favorateGame = "Cricket";
+
+        delete person.age;
+
+        console.log(person);
+        
+        // Lopping Through object Properties
+        for (let key in person){
+            console.log('${key}:${person[key]}');
+        }
+
+        // Checking for the property
+        let book = {
+            title: "2002",
+            author: "Orwell"
+        };
+
+        function hasProperty(obj, key){
+            return key in obj;
+        }
+
+        console.log(hasProperty(book, "title"));
+        console.log(hasProperty(book, "year"));
+      
+        //Counting properties in a object
+        function countProperties(obj){
+            let count = 0;
+            for(let key in obj){
+                count++;
+            }
+            return count;
+
+        }
+        let user = {
+            name: "John",
+            age: 30,
+            isAdmin: true
+        };
+        console.log(countProperties(user));
+
+        // Object With Methods
+        let calculator = {
+            num1:10,
+            num2:5,
+            add(){
+                return this.num1+this.num2;
+            },  
+            subtract(){
+                return this.num1-this.num2;
+            } 
+        };
+        console.log(calculator.add());
+        console.log(calculator.subtract());
+
+        // Cloning of an Object
+        let indra = {
+            name:"sam",
+            age:28
+        };
+        function cloneObject(obj){
+            let clone = {};
+            for (let key in obj){
+                clone[key] = obj[key];
+            }
+            return clone;
+        }
+        let indraClone = cloneObject(indra);
+        console.log(indraClone);
+
+        //Merging Objects
+        let user1 = {
+            name: "indra",
+            age:22
+        };
+        let user2 = {
+            city : "Hyd",
+            area : "jntuk"
+        };
+        let mergedUser = Object.assign
+        ({}, user1, user2);
+
+        console.log(mergedUser);
+
+        // object with Default Values
+        function createUser(name, age, role = "user"){
+            return{
+                name : name,
+                age : age,
+                role : role 
+            };
+        }
+        let newUser = createUser("Tom", 30);
+        console.log(newUser);
+
+        // Nested Objects
+        let company = {
+            name : "Tech Corp",
+            employees : [
+              {name: "Alice", position:"Developer"},
+              {name: "Anicee", position:"Full Stack Developer"},
+              
+            ]
+        };
+        console.log(company.employees[0].name);
+        console.log(company.employees[1].name);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

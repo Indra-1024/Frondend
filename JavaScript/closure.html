@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function outerFunction(){
+            let counter = 10;
+            function innerFunction(){
+                 counter--;
+                 return counter;
+            }
+            return innerFunction;
+        }
+
+        var decreamentCounter = outerFunction();
+
+        console.log(decreamentCounter());
+        console.log(decreamentCounter());
+        console.log(decreamentCounter());
+        console.log(decreamentCounter());
+        console.log(decreamentCounter());
+
+        //prototype
+
+        let book = {
+            name : "Positive About Life",
+            moral(){
+                console.log("Positiveness")
+            }
+
+        };
+        let reader = {
+            read : "indra Sena Reddy",
+            learn : "About Life ",
+            study(){
+                console.log("Study Well")
+            },
+            __proto__ : book
+        };
+        let listner= {
+            done: "15pages",
+            __proto__ : reader
+        };
+
+        reader.__proto__ = book;
+        console.log(reader.read);
+        console.log(reader.learn);
+        console.log(reader.name);
+        console.log(reader.moral);
+
+        listner.moral();
+        listner.study();
+        // listner.book.hasOwnProperty();
+        
+        let mobile = {
+            name : "realme",
+            cost : "15000/-"
+        };
+        let phone = {
+            name : "Vivo",
+            cost : "18000/-"
+        };
+
+        function invite(brand1, brand2){
+            console.log(brand1+ " " + this.name + " " + this.cost+ " " + brand2);
+        };
+        
+        // Bind
+        var inviteMobile = invite.bind(mobile);
+        var invitePhone = invite.bind(phone);
+        inviteMobile("Discount 3000/-", "AfterDiscount 19000/-");
+        invitePhone("Discount 3000/-", "AfterDiscount 15000/-");
+         
+        // call
+        invite.call(mobile, "Realme Narzo", "Actual cost 20000/-");
+        // apply
+        invite.apply(phone, ["Vivo y51", "Actual cost 22000/-"]);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
